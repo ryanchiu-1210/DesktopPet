@@ -17,3 +17,8 @@ D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\ref\desktopPet.d
 D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.Properties.Resources.resources
 D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.UC.BongoDown.resources
 D:\ryanchiu-1210\DesktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.sourcelink.json
+D:\ryanchiu-1210\desktopPet\desktopPet\bin\Debug\net8.0-windows\Gma.System.MouseKeyHook.dll
+D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.csproj.AssemblyReference.cache
+D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.csproj.Up2Date
+D:\ryanchiu-1210\desktopPet\desktopPet\bin\Debug\net8.0-windows\Data\Data.json
+D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.UC.BongoUp.resources

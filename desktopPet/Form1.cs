@@ -1,60 +1,196 @@
-using desktopPet.UC;
+Ôªøusing desktopPet.UC;
+using Gma.System.MouseKeyHook;
 using System;
+using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Text.Json;
 using System.Windows.Forms;
-
+using Timer = System.Windows.Forms.Timer;
 namespace desktopPet
 {
     public partial class mainForm : Form
     {
         public static mainForm instance;
 
-        // Windows API •Œ©Ûµ¯µ°©Ï¶≤
+        private IKeyboardMouseEvents _globalHook;
+
+        // ÂÆöÊôÇËá™ÂãïÂÑ≤Â≠òÁî® Timer
+        private Timer _saveTimer;
+
+        // È†êÂÖàÂª∫Á´ã UserControl ÂØ¶‰æãËàáÁãÄÊÖãÊóóÊ®ô
+        private readonly BongoDown _ucDown = new BongoDown();
+        private readonly BongoUp _ucUp = new BongoUp();
+        private bool _isDown = true;
+
+        #region Win32 API
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
+        [DllImport("user32.dll")]
+        private static extern int SendMessage(IntPtr hWnd, int msg, bool wParam, int lParam);
+
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HTCAPTION = 0x2;
+        private const int WM_SETREDRAW = 0x000B;
+        #endregion
+
+        private readonly string _filepath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.json");
 
         public mainForm()
         {
             InitializeComponent();
             instance = this;
+            this.TopMost = true;
 
-            // ¨∞ mainForm •ª®≠ªP mainpanel ∏j©w©Ï¶≤
+            // 1. ÈñãÂïü Form Ëàá mainpanel ÈõôÈáçÁ∑©Ë°ùÔºàÊäóÈñÉÁàçÔºâ
+            EnableDoubleBuffering();
+
             EnableDrag(this);
+            SubscribeGlobalEvents();
 
-            ChangeUC(new BongoDown());
+            // 2. È†êË®≠È°ØÁ§∫ BongoDown
+            ChangeUC(_ucDown);
+
+            // 3. ËÆÄÂèñ JSON Ë®àÊï∏Ë≥áÊñô
+            LoadCounterData();
+
+            // 4. ÂàùÂßãÂåñ‰∏¶ÂïüÂãïÂÆöÊôÇËá™ÂãïÂÑ≤Â≠òÔºà‰æãÂ¶ÇÊØè 5000 ÊØ´Áßí / 5 ÁßíÂ≠ò‰∏ÄÊ¨°Ôºâ
+            InitAutoSaveTimer(5000);
         }
 
-        private void mainForm_Load(object sender, EventArgs e)
+        private void InitAutoSaveTimer(int intervalMs)
         {
+            _saveTimer = new Timer();
+            _saveTimer.Interval = intervalMs;
+            _saveTimer.Tick += (s, e) => SaveCounterData();
+            _saveTimer.Start();
+        }
 
+        private void EnableDoubleBuffering()
+        {
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                           ControlStyles.UserPaint |
+                           ControlStyles.AllPaintingInWmPaint, true);
+            this.UpdateStyles();
+
+            typeof(Control).GetProperty("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance)
+                           ?.SetValue(mainpanel, true, null);
+        }
+
+        private void LoadCounterData()
+        {
+            try
+            {
+                if (File.Exists(_filepath))
+                {
+                    string jsonText = File.ReadAllText(_filepath);
+                    long count = JsonSerializer.Deserialize<long>(jsonText);
+                    textBox1.Text = count.ToString();
+                }
+                else
+                {
+                    textBox1.Text = "0";
+                }
+            }
+            catch
+            {
+                textBox1.Text = "0";
+            }
+        }
+
+        private void SaveCounterData()
+        {
+            try
+            {
+                if (long.TryParse(textBox1.Text, out long count))
+                {
+                    string jsonString = JsonSerializer.Serialize(count);
+                    File.WriteAllText(_filepath, jsonString);
+                }
+            }
+            catch
+            {
+                // ÂøΩÁï•ÁôºÁîüÁöÑÊ™îÊ°àÂØ´ÂÖ•‰æãÂ§ñ
+            }
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x08000000; // WS_EX_NOACTIVATEÔºöÈò≤Ê≠¢Ê°åÂØµÂº∑Ë°åÊê∂Ëµ∞ÁÑ¶Èªû
+                return cp;
+            }
+        }
+
+        private void SubscribeGlobalEvents()
+        {
+            _globalHook = Hook.GlobalEvents();
+            _globalHook.KeyDown += GlobalHook_KeyDown;
+            _globalHook.MouseDown += GlobalHook_MouseDown;
+        }
+
+        private void GlobalHook_KeyDown(object sender, KeyEventArgs e)
+        {
+            TriggerIncrement();
+        }
+
+        private void GlobalHook_MouseDown(object sender, MouseEventArgs e)
+        {
+            TriggerIncrement();
+        }
+
+        private void TriggerIncrement()
+        {
+            if (this.IsHandleCreated)
+            {
+                this.BeginInvoke(new Action(IncrementCount));
+            }
+        }
+
+        private void IncrementCount()
+        {
+            // 1. Êï∏Â≠óÂä† 1
+            string str = textBox1.Text.Trim();
+            if (!long.TryParse(str, out long last))
+            {
+                last = 0;
+            }
+            last++;
+            textBox1.Text = last.ToString();
+
+            // 2. ÂàáÊèõ UserControl (Down / Up Ëº™ÊµÅ)
+            _isDown = !_isDown;
+            ChangeUC(_isDown ? _ucDown : _ucUp);
         }
 
         public void ChangeUC(UserControl uc)
         {
-            mainpanel.Controls.Clear();
+            SendMessage(mainpanel.Handle, WM_SETREDRAW, false, 0);
 
-            // ¨∞∑s•[§J™∫ UserControl §Œ®‰§∫≥°§∏•Û°]¶p PictureBox°^¶€∞ ∏j©w©Ï¶≤®∆•Û
-            EnableDrag(uc);
-
-            mainpanel.Controls.Add(uc);
-            ClientSize = uc.Size;
+            try
+            {
+                mainpanel.Controls.Clear();
+                EnableDrag(uc);
+                mainpanel.Controls.Add(uc);
+            }
+            finally
+            {
+                SendMessage(mainpanel.Handle, WM_SETREDRAW, true, 0);
+                mainpanel.Refresh();
+            }
         }
 
-        /// <summary>
-        /// ªº∞j±N±±®Ó∂µªP®‰©“¶≥§l±±®Ó∂µ∏j©w MouseDown ©Ï¶≤®∆•Û
-        /// </summary>
         private void EnableDrag(Control control)
         {
-            // ≠Y¶≥§£ß∆±Êƒ≤µo©Ï¶≤™∫§∏•Û°]®“¶p´ˆ∂s°^°A•i•H¶b¶π≥B±∆∞£
             if (!(control is Button))
             {
-                control.MouseDown -= Universal_MouseDown; // ¡◊ßK≠´Ω∆≠qæ\
+                control.MouseDown -= Universal_MouseDown;
                 control.MouseDown += Universal_MouseDown;
             }
 
@@ -71,6 +207,29 @@ namespace desktopPet
                 ReleaseCapture();
                 SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // 1. ÂÅúÊ≠¢‰∏¶ÈáãÊîæ Timer
+            if (_saveTimer != null)
+            {
+                _saveTimer.Stop();
+                _saveTimer.Dispose();
+            }
+
+            // 2. Ë¶ñÁ™óÈóúÈñâÂâçÊúÄÂæåÂü∑Ë°å‰∏ÄÊ¨°Â≠òÊ™î
+            SaveCounterData();
+
+            // 3. Ëß£Èô§Èâ§Â≠êÁ∂ÅÂÆöËàáÈáãÊîæË≥áÊ∫ê
+            if (_globalHook != null)
+            {
+                _globalHook.KeyDown -= GlobalHook_KeyDown;
+                _globalHook.MouseDown -= GlobalHook_MouseDown;
+                _globalHook.Dispose();
+            }
+
+            base.OnFormClosing(e);
         }
     }
 }

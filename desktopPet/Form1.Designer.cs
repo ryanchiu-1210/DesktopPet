@@ -34,11 +34,13 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.FromArgb(224, 224, 224);
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Cascadia Mono", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(1, 164);
+            textBox1.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(1, 162);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(158, 21);
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(158, 26);
             textBox1.TabIndex = 1;
             // 
             // mainpanel
@@ -53,7 +55,7 @@
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(161, 197);
+            ClientSize = new Size(161, 239);
             Controls.Add(mainpanel);
             Controls.Add(textBox1);
             Font = new Font("Cascadia Mono", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -61,7 +63,6 @@
             Name = "mainForm";
             Text = "Form1";
             TransparencyKey = SystemColors.ActiveCaption;
-            Load += mainForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\ryanchiu-1210\\DesktopPet\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\uc\\bongoup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\uc\\bongoup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|D:\\ryanchiu-1210\\DesktopPet\\desktoppet\\uc\\bongodown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\uc\\bongodown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\uc\\bongodown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\uc\\bongodown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|D:\\ryanchiu-1210\\DesktopPet\\desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,12 +35,24 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BongoUp.cs [Design]",
+              "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\UC\\BongoUp.cs",
+              "RelativeDocumentMoniker": "desktopPet\\UC\\BongoUp.cs",
+              "ToolTip": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\UC\\BongoUp.cs [Design]",
+              "RelativeToolTip": "desktopPet\\UC\\BongoUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T13:44:42.415Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\Form1.cs",
               "RelativeDocumentMoniker": "desktopPet\\Form1.cs",
               "ToolTip": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\Form1.cs",
               "RelativeToolTip": "desktopPet\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T12:45:48.136Z",
               "EditorCaption": ""
@@ -55,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\Form1.cs",
               "RelativeDocumentMoniker": "desktopPet\\Form1.cs",
