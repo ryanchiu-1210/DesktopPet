@@ -16,3 +16,4 @@ D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.genru
 D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\ref\desktopPet.dll
 D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.Properties.Resources.resources
 D:\ryanchiu-1210\desktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.UC.BongoDown.resources
+D:\ryanchiu-1210\DesktopPet\desktopPet\obj\Debug\net8.0-windows\desktopPet.sourcelink.json

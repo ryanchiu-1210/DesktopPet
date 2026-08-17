@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ryanchiu-1210\\desktopPet\\desktopPet\\desktopPet.csproj": {}
+    "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\desktopPet.csproj": {}
   },
   "projects": {
-    "D:\\ryanchiu-1210\\desktopPet\\desktopPet\\desktopPet.csproj": {
+    "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\desktopPet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ryanchiu-1210\\desktopPet\\desktopPet\\desktopPet.csproj",
+        "projectUniqueName": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\desktopPet.csproj",
         "projectName": "desktopPet",
-        "projectPath": "D:\\ryanchiu-1210\\desktopPet\\desktopPet\\desktopPet.csproj",
+        "projectPath": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\desktopPet.csproj",
         "packagesPath": "C:\\Users\\ryan\\.nuget\\packages\\",
-        "outputPath": "D:\\ryanchiu-1210\\desktopPet\\desktopPet\\obj\\",
+        "outputPath": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio 2022\\SDK\\NuGetPackages"
