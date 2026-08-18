@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "st8Qc5/cM5w=",
+  "dgSpecHash": "EjRbZdVQnJ0=",
   "success": true,
-  "projectFilePath": "D:\\ryanchiu-1210\\desktopPet\\desktopPet\\desktopPet.csproj",
+  "projectFilePath": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\desktopPet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ryan\\.nuget\\packages\\mousekeyhook\\5.7.1\\mousekeyhook.5.7.1.nupkg.sha512"
   ],

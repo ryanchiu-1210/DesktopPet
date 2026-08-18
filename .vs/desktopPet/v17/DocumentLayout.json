@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\ryanchiu-1210\\DesktopPet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\uc\\bongoup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\uc\\bongoup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|D:\\ryanchiu-1210\\DesktopPet\\desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|D:\\ryanchiu-1210\\DesktopPet\\desktoppet\\uc\\bongodown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\uc\\bongodown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|D:\\ryanchiu-1210\\DesktopPet\\desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\uc\\bongoup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\uc\\bongoup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|d:\\ryanchiu-1210\\desktoppet\\desktoppet\\desktoppet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{8B79C471-9CFD-476E-ACCE-8975F8AE384E}|desktopPet\\desktopPet.csproj|solutionrelative:desktoppet\\desktoppet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "desktopPet",
+              "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\desktopPet.csproj",
+              "RelativeDocumentMoniker": "desktopPet\\desktopPet.csproj",
+              "ToolTip": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\desktopPet.csproj",
+              "RelativeToolTip": "desktopPet\\desktopPet.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-18T11:13:27.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "BongoUp.cs [Design]",
               "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\UC\\BongoUp.cs",
               "RelativeDocumentMoniker": "desktopPet\\UC\\BongoUp.cs",
@@ -46,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\Form1.cs",
               "RelativeDocumentMoniker": "desktopPet\\Form1.cs",
@@ -59,25 +75,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "BongoDown.cs [Design]",
               "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\UC\\BongoDown.cs",
               "RelativeDocumentMoniker": "desktopPet\\UC\\BongoDown.cs",
               "ToolTip": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\UC\\BongoDown.cs [Design]",
               "RelativeToolTip": "desktopPet\\UC\\BongoDown.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T12:44:21.804Z"
+              "WhenOpened": "2026-08-17T12:44:21.804Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\Form1.cs",
               "RelativeDocumentMoniker": "desktopPet\\Form1.cs",
               "ToolTip": "D:\\ryanchiu-1210\\DesktopPet\\desktopPet\\Form1.cs [Design]",
               "RelativeToolTip": "desktopPet\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T12:44:18.106Z"
+              "WhenOpened": "2026-08-17T12:44:18.106Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

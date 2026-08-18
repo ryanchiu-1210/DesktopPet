@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             textBox1 = new TextBox();
             mainpanel = new Panel();
             SuspendLayout();
@@ -60,6 +61,7 @@
             Controls.Add(textBox1);
             Font = new Font("Cascadia Mono", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "mainForm";
             Text = "Form1";
             TransparencyKey = SystemColors.ActiveCaption;
